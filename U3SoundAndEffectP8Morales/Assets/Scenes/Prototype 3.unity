@@ -716,7 +716,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a110341a98f77fe4b97311d9c34ac16c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 8319029885395392098, guid: d4157b0612aff8a47b330372935d6bf0, type: 3}
+  obstaclePrefabs:
+  - {fileID: 3388571889348837858, guid: 7006df952aab51f49bead66bba2a9e13, type: 3}
+  - {fileID: 6010984422991968680, guid: 5b557be4aaa99ae4f87911c7d3e90ffa, type: 3}
+  - {fileID: 6034092596036514704, guid: 473088ff7eb405c479b34347d35399a5, type: 3}
 --- !u!4 &1467312579
 Transform:
   m_ObjectHideFlags: 0
@@ -727,6 +730,51 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.944776, y: 0.65699756, z: 7.0428076}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1617809513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1617809515}
+  - component: {fileID: 1617809514}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1617809514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617809513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63afcf018e92a214682c0fe430e2e0a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+--- !u!4 &1617809515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617809513}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.3938372, y: 0.21403523, z: 6.1530547}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -878,6 +926,9 @@ MonoBehaviour:
   crashSound: {fileID: 8300000, guid: 913d6445ee8cc4152a9c18da590ee203, type: 3}
   jumpForce: 700
   gravityModifier: 2
+  doubleJumpForce: 400
+  doubleJumpUsed: 0
+  doubleSpeed: 0
   isOnGround: 1
   gameOver: 0
 --- !u!4 &1782102334 stripped
@@ -1096,3 +1147,4 @@ SceneRoots:
   - {fileID: 835818921}
   - {fileID: 1782102328}
   - {fileID: 1467312579}
+  - {fileID: 1617809515}
